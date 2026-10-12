@@ -1,0 +1,14 @@
+{
+  "name": "flightsim-multiplayer",
+  "version": "1.0.0",
+  "description": "Multiplayer flight simulator with NedB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.14.2",
+    "nedb": "^1.8.0",
+    "uuid": "^9.0.1"
+  }
+}

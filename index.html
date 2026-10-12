@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=b74724d0-4736-457d-b0f7-ee182ea99e74
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Person Jet Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hud">
+        <div id="speed-tape" class="hud-box">SPD <br><span id="speed-val">0</span></div>
+
+        <div id="center-reticle">
+            <div id="crosshair"></div>
+            <div id="pitch-ladder"></div>
+        </div>
+
+        <div id="alt-tape" class="hud-box">ALT <br><span id="alt-val">0</span></div>
+
+        <div id="crash-msg">SYSTEM FAILURE<br>CRASH DETECTED</div>
+        <div id="stall-msg">ENGINE STALL<br>ALTITUDE LIMIT REACHED</div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

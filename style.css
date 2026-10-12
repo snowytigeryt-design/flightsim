@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #87CEEB;
+}
+
+canvas {
+    display: block;
+}
+
+/* HUD Styling */
+#hud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Lets you click "through" the HUD onto the canvas */
+    color: #00ff00; /* Tactical green */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(0, 255, 0, 0.8);
+    z-index: 100;
+}
+
+.hud-box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #00ff00;
+    padding: 20px;
+    background: rgba(0, 255, 0, 0.05);
+    font-size: 24px;
+    text-align: center;
+}
+
+#speed-tape { left: 5%; }
+#alt-tape { right: 5%; }
+
+#center-reticle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+}
+
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00ff00;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#pitch-ladder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid rgba(0, 255, 0, 0.5);
+    border-right: 2px solid rgba(0, 255, 0, 0.5);
+    transition: transform 0.1s linear;
+}
+
+#crash-msg {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    font-size: 40px;
+    text-shadow: 0px 0px 10px red;
+    text-align: center;
+    display: none; /* Hidden until crash */
+}
+
+#stall-msg {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: yellow;
+    font-size: 32px;
+    text-shadow: 0px 0px 10px yellow;
+    text-align: center;
+    display: none; /* Hidden until stall */
+}
+
+#health-display {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #00ff00;
+    padding: 20px;
+    background: rgba(0, 255, 0, 0.05);
+    font-size: 24px;
+    text-align: center;
+}
